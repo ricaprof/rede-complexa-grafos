@@ -10,8 +10,7 @@
 
 ### Considerações Iniciais
 
-- Códigos copiados da Internet e/ou de ferramentas de Inteligência Artificial Generativa receberão **nota 0 (zero)**;
-- Códigos que utilizem **bibliotecas externas** que fornecem estruturas de grafos ou algoritmos para sua manipulação ou processamento receberão **nota 0 (zero)**;
+
 - Todas as implementações serão avaliadas mediante um **teste de autoria**. Todos os estudantes do grupo devem apresentar o teste;
 - A **falta de apresentação ou o desconhecimento** de partes importantes do código apresentado pelo grupo resultará em **nota 0 (zero)** ao estudante;
 - A entrega do código-fonte, link com o vídeo da apresentação e relatório deverá ser feita em **um único arquivo zip**;
