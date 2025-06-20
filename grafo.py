@@ -30,13 +30,12 @@ def carregar_dados_padronizados(caminho_arquivo):
 
         # Padronizar nomes dos atores
         atores = [ator.strip().upper() for ator in elenco_raw.split(',') if ator.strip()]
-        if len(atores) < 2:
-            continue  # Ignora se não houver pelo menos dois atores
+        if len(atores) == 0:
+            continue  # Ignora se não houver nenhum ator
 
         # Padronizar nomes dos diretores
         diretores_padronizados = [d.strip().upper() for d in diretor_raw.split(',') if d.strip()]
-        if not diretores_padronizados:
-            continue  # Ignora se não houver diretores válidos
+        # Não exige mais diretores obrigatórios
 
         elencos.append(atores)
         diretores.append(diretores_padronizados)
