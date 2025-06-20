@@ -95,7 +95,7 @@ class Grafo:
     def obter_info(self):
         """Retorna o número de vértices e de arestas do grafo."""
         num_vertices = len(self.vertices)
-        num_arestas = self.num_arestas if self.direcionado else self.num_arestas // 2
+        num_arestas = self.num_arestas if self.direcionado else self.num_arestas 
         return num_vertices, num_arestas
 
     def __str__(self):
