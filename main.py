@@ -93,26 +93,26 @@ def main():
             graus_atores = degree_centrality(grafo_atores)
             graus_direcional = degree_centrality(grafo_direcional)
 
-            print("\nTop 5 vértices com maior grau (Grafo de Atores):")
-            for v, g in sorted(graus_atores.items(), key=lambda x: -x[1])[:5]:
+            print("\nTop 10 vértices com maior grau (Grafo de Atores):")
+            for v, g in sorted(graus_atores.items(), key=lambda x: -x[1])[:10]:
                 print(f"{v}: {g}")
 
-            print("\nTop 5 vértices com maior grau (Grafo Direcional):")
-            for v, g in sorted(graus_direcional.items(), key=lambda x: -x[1])[:5]:
+            print("\nTop 10 vértices com maior grau (Grafo Direcional):")
+            for v, g in sorted(graus_direcional.items(), key=lambda x: -x[1])[:10]:
                 print(f"{v}: {g}")
 
         elif opcao == "5":
             print("\n--- CENTRALIDADE DE INTERMEDIAÇÃO (BETWEENNESS) ---")
             centralidade = betweenness_centrality(grafo_atores)
-            print("Top 5 vértices por intermediação:")
-            for v, c in sorted(centralidade.items(), key=lambda x: -x[1])[:5]:
+            print("Top 10 vértices por intermediação:")
+            for v, c in sorted(centralidade.items(), key=lambda x: -x[1])[:10]:
                 print(f"{v}: {c:.4f}")
 
         elif opcao == "6":
             print("\n--- CENTRALIDADE DE PROXIMIDADE (CLOSENESS) ---")
             centralidade = closeness_centrality(grafo_atores)
-            print("Top 5 vértices por proximidade:")
-            for v, c in sorted(centralidade.items(), key=lambda x: -x[1])[:5]:
+            print("Top 10 vértices por proximidade:")
+            for v, c in sorted(centralidade.items(), key=lambda x: -x[1])[:10]:
                 print(f"{v}: {c:.4f}")
 
         elif opcao == "0":
