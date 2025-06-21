@@ -8,6 +8,7 @@ from algoritmos import (
     closeness_centrality
 )
 import os
+import random
 
 def mostrar_menu():
     print("\n===== ANÁLISE DE REDES COMPLEXAS =====")
@@ -110,9 +111,17 @@ def main():
 
         elif opcao == "6":
             print("\n--- CENTRALIDADE DE PROXIMIDADE (CLOSENESS) ---")
-            centralidade = closeness_centrality(grafo_atores)
-            print("Top 10 vértices por proximidade:")
-            for v, c in sorted(centralidade.items(), key=lambda x: -x[1])[:10]:
+            
+            componentes = componentes_conexas(grafo_atores)
+            maior_componente = max(componentes, key=len)
+            amostra = random.sample(list(maior_componente), 100)
+
+
+            centralidade = closeness_centrality(grafo_atores, vertices=maior_componente)
+
+            print("Top 10 vértices por proximidade (entre 100 amostrados):")
+            top10 = sorted(centralidade.items(), key=lambda x: -x[1])[:10]
+            for v, c in top10:
                 print(f"{v}: {c:.4f}")
 
         elif opcao == "0":

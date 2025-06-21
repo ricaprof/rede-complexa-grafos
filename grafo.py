@@ -102,7 +102,7 @@ class Grafo:
         """Gera uma representação textual do grafo."""
         tipo = "direcionado" if self.direcionado else "não direcionado"
         saida = f"Grafo {tipo}\n"
-        saida += f"Vértices: {len(self.vertices)}, Arestas: {self.num_arestas if self.direcionado else self.num_arestas // 2}\n"
+        saida += f"Vértices: {len(self.vertices)}, Arestas: {self.num_arestas if self.direcionado else self.num_arestas }\n"
 
         for vertice in sorted(self.vertices):
             vizinhos = ", ".join(f"{v}({p})" for v, p in self.lista_adj[vertice])
