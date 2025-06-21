@@ -25,8 +25,8 @@ def carregar_dados_padronizados(caminho_arquivo):
     elencos, diretores = [], []
 
     for _, linha in df.iterrows():
-        elenco_raw = linha['cast']
-        diretor_raw = linha['director']
+        diretor_raw = linha['cast']
+        elenco_raw = linha['director']
 
         # Padronizar nomes dos atores
         atores = [ator.strip().upper() for ator in elenco_raw.split(',') if ator.strip()]

@@ -114,7 +114,7 @@ def main():
             
             componentes = componentes_conexas(grafo_atores)
             maior_componente = max(componentes, key=len)
-            amostra = random.sample(list(maior_componente), 100)
+            
 
 
             centralidade = closeness_centrality(grafo_atores, vertices=maior_componente)
